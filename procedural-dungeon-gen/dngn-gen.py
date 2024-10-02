@@ -20,7 +20,10 @@ def place_rooms(grid, num_rooms):
 
             if grid[row][col] == 0:  # if spot is empty
                 grid[row][col] = 1  # place room
-                break  # exit loop and move to next room
+                break
+            
+            elif grid[row][col] == 1:  # if spot is filled
+                grid[row][col] = 2  # place special room  
 
 grid = create_grid(5, 5)
 num_rooms = random.randint(5, 10)
